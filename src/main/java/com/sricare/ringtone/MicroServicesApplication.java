@@ -1,4 +1,4 @@
-package com.sricare.microservices;
+package com.sricare.ringtone;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
