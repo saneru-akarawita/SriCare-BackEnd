@@ -7,6 +7,7 @@ import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 @AllArgsConstructor
@@ -22,7 +23,8 @@ public class RingingToneServiceImpl implements RingingToneService{
 
     @Override
     public RingingTone getRingingToneById(Long id) {
-        return ringingToneRepository.getReferenceById(id);
+        Optional<RingingTone> ringingTone= ringingToneRepository.findById(id);
+        return ringingTone.orElse(null);
     }
 
     @Override
