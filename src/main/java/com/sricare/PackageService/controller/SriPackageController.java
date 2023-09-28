@@ -13,7 +13,7 @@ import java.util.List;
 @RestController
 @AllArgsConstructor
 @RequestMapping("api/v1/package")
-public class PackageController {
+public class SriPackageController {
     private final PackageService packageService;
     @PostMapping("/add")
     public void addPackage(@RequestBody PackageDTO packageDTO){

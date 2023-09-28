@@ -19,7 +19,7 @@ public class PackageServiceImpl implements PackageService{
         SriPackage sriPackage=SriPackage.builder()
                 .name(packageDTO.getName())
                 .price(packageDTO.getPrice())
-                .PackageType(packageDTO.getPackageType())
+                .packageType(packageDTO.getPackageType())
                 .build();
         packageRepository.save(sriPackage);
 
@@ -32,7 +32,7 @@ public class PackageServiceImpl implements PackageService{
 
     @Override
     public List<SriPackage> getAllPackagesByType(PackageType type) {
-        return packageRepository.findGetPackageByPackageType(type);
+        return packageRepository.getSriPackageByPackageType(type);
     }
 
     @Override

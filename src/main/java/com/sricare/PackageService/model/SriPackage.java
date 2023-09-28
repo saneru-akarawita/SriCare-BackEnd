@@ -23,6 +23,6 @@ public class SriPackage {
     private Double price;
 
     @Enumerated(EnumType.STRING)
-    private PackageType PackageType;
+    private PackageType packageType;
 
 }
