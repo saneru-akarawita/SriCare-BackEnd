@@ -5,7 +5,8 @@ import com.sricare.microservices.dto.BillDTO;
 import java.util.List;
 
 public interface BillingService {
-    List<BillDTO> getUnpaidBills(Long userId);
-    BillDTO getBillDetails(Long billId);
-    void payBill(Long billId);
+    List<BillDTO> getUnpaidBillsByUserId(Long userId);
+    BillDTO getBillById(Long id);
+    void payBill(Long id);
 }
+

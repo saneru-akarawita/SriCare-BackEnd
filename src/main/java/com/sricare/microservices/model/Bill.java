@@ -1,36 +1,44 @@
 package com.sricare.microservices.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
+
+import jakarta.persistence.*;
+import java.util.Date;
 
 @Entity
+@Table(name = "billing_info")
+@NoArgsConstructor
+@AllArgsConstructor
+@Getter
+@Setter
+@ToString
 public class Bill {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(name = "userid")
     private Long userId;
-    private double amount;
+
+    @Column(name = "status")
     private String status;
 
-    public void setStatus(String paid) {
-        return;
-    }
+    @Column(name = "period")
+    private String period;
 
-    public Object getId() {
-        return null;
-    }
+    @Column(name = "previous_due_amount")
+    private Double previousDueAmount;
 
-    public Object getAmount() {
-        return null;
-    }
+    @Column(name = "charges_for_period")
+    private Double chargesForPeriod;
 
-    public Object getStatus() {
-        return null;
-    }
+    @Column(name = "pay_before")
+    private Date payBefore;
 
-
+    // Constructors, getters, and setters
 }
