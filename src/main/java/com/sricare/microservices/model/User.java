@@ -1,14 +1,13 @@
-package com.sricare.microservices.data;
+package com.sricare.microservices.model;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 
 @Entity
 public class User {
     @Id
     private Long id;
     private String email;
-    // Other user properties (add more as needed)
 
     public User() {
         // Default constructor
