@@ -1,4 +1,4 @@
-package com.sricare.Notification.service;
+package com.sricare.microservices.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mail.SimpleMailMessage;
